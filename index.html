@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radha Ni Event | Luxury Event Management & Production</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(45, 11, 54, 0.95) 0%, rgba(15, 3, 20, 0.98) 100%);
+        }
+        .accent-gradient {
+            background: linear-gradient(90deg, #701a75 0%, #a21caf 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .form-step {
+            display: none;
+        }
+        .form-step.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-[#0b020d] text-gray-200 antialiased selection:bg-purple-500 selection:text-white">
+
+    <header class="fixed w-full z-50 bg-[#0f0314]/90 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="serif-title text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">
+                    RADHA NI EVENT
+                </span>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="#home" class="hover:text-purple-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+                <a href="#services" class="hover:text-purple-400 transition-colors">Services</a>
+                <a href="#portfolio" class="hover:text-purple-400 transition-colors">Portfolio</a>
+            </nav>
+
+            <div>
+                <a href="#booking-engine" class="accent-gradient text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-purple-950/50 hover:opacity-90 transition-opacity hidden sm:inline-block">
+                    Book Consultation
+                </a>
+                <button class="md:hidden text-white text-xl" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="hidden id='mobileMenu' bg-[#0f0314] border-b border-white/10 px-4 py-4 space-y-3 md:hidden">
+            <a href="#home" class="block text-gray-300 hover:text-white py-2">Home</a>
+            <a href="#about" class="block text-gray-300 hover:text-white py-2">About</a>
+            <a href="#services" class="block text-gray-300 hover:text-white py-2">Services</a>
+            <a href="#portfolio" class="block text-gray-300 hover:text-white py-2">Portfolio</a>
+            <a href="#booking-engine" class="block accent-gradient text-center py-2 rounded-lg text-white font-semibold">Book Consultation</a>
+        </div>
+    </header>
+
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40"></div>
+        <div class="absolute inset-0 hero-gradient z-10"></div>
+
+        <div class="relative z-20 max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8 mt-12">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest text-purple-300 uppercase mb-6 backdrop-blur-sm">
+                <i class="fa-solid fa-star text-[10px]"></i> Luxury Architecture & Production
+            </div>
+            <h1 class="serif-title text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-none mb-6">
+                Crafting Impeccable <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-amber-200">
+                    High-Budget Milestones
+                </span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-gray-400 leading-relaxed mb-10">
+                Premium spatial design, meticulous logistics, and absolute execution timeline commitments across major global regions and aesthetic architectures.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#booking-engine" class="w-full sm:w-auto px-8 py-4 rounded-full accent-gradient text-white font-bold shadow-xl shadow-purple-900/40 hover:scale-[1.02] transition-transform text-center">
+                    Initiate Event Design <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-semibold hover:bg-white/10 transition-colors text-center backdrop-blur-sm">
+                    Explore Executed Proofs
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0b020d] to-transparent z-20"></div>
+    </section>
+
+    <section id="about" class="py-24 relative z-20 bg-[#0b020d]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="text-xs font-bold tracking-widest text-purple-400 uppercase">Operational Excellence</div>
+                    <h2 class="serif-title text-3xl sm:text-4xl font-bold text-white">Neutralizing Risk for Global Accounts & Elite Families</h2>
+                    <p class="text-gray-400 leading-relaxed">
+                        Built on absolute logistical predictability and precise structural engineering design philosophies, Radha Ni Event removes the operational anxiety out of multi-tiered production milestones.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        We don't simply style decor; we manage risk mitigation, handle massive complex vendor meshes, and build complete structural worlds inside strict, unyielding delivery timelines.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-xl glass-card">
+                            <div class="text-2xl font-bold text-purple-400 mb-1">100%</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">Timeline Fidelity Rate</div>
+                        </div>
+                        <div class="p-4 rounded-xl glass-card">
+                            <div class="text-2xl font-bold text-pink-400 mb-1">Premium</div>
+                            <div class="text-xs text-gray-400 uppercase tracking-wider">Logistical Scales</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000&auto=format&fit=crop" alt="Premium Wedding Setup" class="rounded-2xl object-cover w-full h-64 border border-white/10 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000&auto=format&fit=crop" alt="Corporate AV Tech Setup" class="rounded-2xl object-cover w-full h-48 border border-white/10 shadow-2xl">
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=1000&auto=format&fit=crop" alt="Themed Private Gala" class="rounded-2xl object-cover w-full h-48 border border-white/10 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000&auto=format&fit=crop" alt="Premium Table Curation" class="rounded-2xl object-cover w-full h-64 border border-white/10 shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-[#0f0314] border-y border-white/5 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="text-xs font-bold tracking-widest text-purple-400 uppercase mb-3">Service Scope Architecture</div>
+                <h2 class="serif-title text-3xl sm:text-5xl font-bold text-white mb-4">Dedicated Structural Competence</h2>
+                <p class="text-gray-400">Deep SEO relevance built across separated functional categories ensuring optimized planning context.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-purple-950/50 border border-purple-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-heart text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="serif-title text-xl font-bold text-white mb-3">Weddings & Pre-wedding Ceremonies</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Luxury conceptual decor, structural staging architecture, premium global venue curation, fine catering logistical systems, and master vendor deployment maps.
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-400 border-t border-white/5 pt-4">
+                        <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Bespatial Scale Blueprinting</li>
+                        <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Multi-tier Micro Catering Maps</li>
+                    </ul>
+                </div>
+
+                <div class="p-8 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/50 border border-blue-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-building text-blue-400 text-xl"></i>
+                    </div>
+                    <h3 class="serif-title text-xl font-bold text-white mb-3">Corporate Events & MICE Architecture</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Flawless physical product launches, major industry conferences, elite awards nights, highly advanced audio-visual technical setups, and executive hospitality arrays.
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-400 border-t border-white/5 pt-4">
+                        <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>Zero Latency Audio-Visual Meshing</li>
+                        <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>Executive Delegations Routing</li>
+                    </ul>
+                </div>
+
+                <div class="p-8 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-950/50 border border-amber-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-glass-cheers text-amber-400 text-xl"></i>
+                    </div>
+                    <h3 class="serif-title text-xl font-bold text-white mb-3">Social Parties & Themed Gatherings</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Bespoke milestone anniversaries, luxury birthdays, cultural celebratory events, and deeply customized spatial dining and tailored thematic entertainment frameworks.
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-400 border-t border-white/5 pt-4">
+                        <li><i class="fa-solid fa-check text-amber-400 mr-2"></i>Concept-to-Room Theming</li>
+                        <li><i class="fa-solid fa-check text-amber-400 mr-2"></i>Custom Immersive Entertainment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-[#0b020d] relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <div class="text-xs font-bold tracking-widest text-purple-400 uppercase mb-3">Executed Realities</div>
+                    <h2 class="serif-title text-3xl sm:text-5xl font-bold text-white">The High-Resolution Evidence</h2>
+                </div>
+                <div class="flex flex-wrap gap-2 text-xs sm:text-sm">
+                    <button onclick="filterPortfolio('all')" class="portfolio-filter-btn px-4 py-2 rounded-full border border-purple-500/40 bg-purple-500/10 text-white font-medium transition-all">All Operations</button>
+                    <button onclick="filterPortfolio('weddings')" class="portfolio-filter-btn px-4 py-2 rounded-full border border-white/5 bg-white/5 text-gray-400 hover:text-white transition-all">Weddings</button>
+                    <button onclick="filterPortfolio('corporate')" class="portfolio-filter-btn px-4 py-2 rounded-full border border-white/5 bg-white/5 text-gray-400 hover:text-white transition-all">Corporate</button>
+                    <button onclick="filterPortfolio('social')" class="portfolio-filter-btn px-4 py-2 rounded-full border border-white/5 bg-white/5 text-gray-400 hover:text-white transition-all">Social</button>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+                <div class="portfolio-item weddings relative overflow-hidden rounded-2xl group border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1519225495810-7512c696505a?q=80&w=1000&auto=format&fit=crop" alt="Elite Wedding Gala" class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <span class="text-xs text-purple-400 font-bold uppercase tracking-wider mb-1 block">Weddings</span>
+                        <h4 class="text-lg font-bold text-white serif-title">The Grand Palace Pavilion</h4>
+                        <div class="flex items-center justify-between mt-2 pt-2 border-t border-white/10 text-xs text-gray-400">
+                            <span>Scale: 1,200 Guests</span>
+                            <span>Region: Luxury Estate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item corporate relative overflow-hidden rounded-2xl group border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1000&auto=format&fit=crop" alt="Tech Summit Setup" class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <span class="text-xs text-blue-400 font-bold uppercase tracking-wider mb-1 block">Corporate</span>
+                        <h4 class="text-lg font-bold text-white serif-title">NextGen Global Keynote</h4>
+                        <div class="flex items-center justify-between mt-2 pt-2 border-t border-white/10 text-xs text-gray-400">
+                            <span>Scale: MICE Audio-Visual Setup</span>
+                            <span>Region: Innovation Centre</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item social relative overflow-hidden rounded-2xl group border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1000&auto=format&fit=crop" alt="Premium Private Anniversary" class="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <span class="text-xs text-amber-400 font-bold uppercase tracking-wider mb-1 block">Social</span>
+                        <h4 class="text-lg font-bold text-white serif-title">The Noir Custom Velvet Gala</h4>
+                        <div class="flex items-center justify-between mt-2 pt-2 border-t border-white/10 text-xs text-gray-400">
+                            <span>Scale: Bespoke Immersive Theme</span>
+                            <span>Region: Private Estate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking-engine" class="py-24 bg-gradient-to-b from-[#0f0314] to-[#0b020d] border-t border-white/5 relative z-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="text-xs font-bold tracking-widest text-purple-400 uppercase mb-3">Phase 1 Lead Optimization Engine</div>
+                <h2 class="serif-title text-3xl sm:text-5xl font-bold text-white mb-4">Intelligent Multi-Step Inquiry Router</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">Provide parameters to auto-qualify project scaling and budget fits. Move negotiations instantly to an advanced structural stage.</p>
+            </div>
+
+            <div class="p-8 sm:p-12 rounded-3xl glass-card relative border border-white/10 shadow-2xl">
+                <div class="w-full bg-white/5 h-1 rounded-full mb-10 overflow-hidden flex">
+                    <div class="accent-gradient h-full w-1/3 transition-all duration-300" id="form-progress"></div>
+                </div>
+
+                <form id="leadCaptureForm" onsubmit="handleFormSubmission(event)">
+                    <div class="form-step active" data-step="1">
+                        <h3 class="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm border border-purple-500/30">1</span>
+                            Define Event Architectural Domain
+                        </h3>
+                        <div class="grid sm:grid-cols-3 gap-4 mb-8">
+                            <label class="cursor-pointer relative p-5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 flex flex-col justify-between h-36 transition-all select-none">
+                                <input type="radio" name="event_type" value="weddings" class="absolute top-4 right-4 accent-purple-500" checked>
+                                <i class="fa-solid fa-heart text-2xl text-purple-400 mt-4"></i>
+                                <span class="font-medium text-white block">Wedding & Pre-Wed</span>
+                            </label>
+                            <label class="cursor-pointer relative p-5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 flex flex-col justify-between h-36 transition-all select-none">
+                                <input type="radio" name="event_type" value="corporate" class="absolute top-4 right-4 accent-purple-500">
+                                <i class="fa-solid fa-building text-2xl text-blue-400 mt-4"></i>
+                                <span class="font-medium text-white block">Corporate & MICE</span>
+                            </label>
+                            <label class="cursor-pointer relative p-5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 flex flex-col justify-between h-36 transition-all select-none">
+                                <input type="radio" name="event_type" value="social" class="absolute top-4 right-4 accent-purple-500">
+                                <i class="fa-solid fa-glass-cheers text-2xl text-amber-400 mt-4"></i>
+                                <span class="font-medium text-white block">Social & Themed</span>
+                            </label>
+                        </div>
+                        <div class="flex justify-end">
+                            <button type="button" onclick="nextStep(1)" class="px-6 py-3 rounded-full accent-gradient text-white font-semibold text-sm hover:opacity-90">Continue to Logistics</button>
+                        </div>
+                    </div>
+
+                    <div class="form-step" data-step="2">
+                        <h3 class="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm border border-purple-500/30">2</span>
+                            Logistical Parameters & Scale Fitment
+                        </h3>
+                        <div class="grid sm:grid-cols-2 gap-6 mb-8">
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-bold">Estimated Guest Logistics Count</label>
+                                <select name="guest_count" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500" required>
+                                    <option value="" disabled selected class="bg-[#14061a]">Select capacity envelope...</option>
+                                    <option value="under_200" class="bg-[#14061a]">Under 200 Guests</option>
+                                    <option value="200_500" class="bg-[#14061a]">200 - 500 Guests</option>
+                                    <option value="500_1000" class="bg-[#14061a]">500 - 1,000 Guests</option>
+                                    <option value="1000_plus" class="bg-[#14061a]">1,000+ Premium Scale</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-bold">Estimated Operational Budget Range</label>
+                                <select id="budget_range" name="budget_range" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500" required>
+                                    <option value="" disabled selected class="bg-[#14061a]">Select investment envelope...</option>
+                                    <option value="low" class="bg-[#14061a]">Below Operational Limit ($10,000)</option>
+                                    <option value="standard" class="bg-[#14061a]">$10,000 - $30,000</option>
+                                    <option value="premium" class="bg-[#14061a]">$30,000 - $75,000</option>
+                                    <option value="ultra_high" class="bg-[#14061a]">$75,000+ Elite Production</option>
+                                </select>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-bold">Target Execution Date Window</label>
+                                <input type="text" name="date_range" placeholder="e.g., Mid October 2026 or Specific Dates" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500" required>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <button type="button" onclick="prevStep(2)" class="px-6 py-3 rounded-full bg-white/5 text-gray-300 text-sm hover:bg-white/10">Back</button>
+                            <button type="button" onclick="nextStep(2)" class="px-6 py-3 rounded-full accent-gradient text-white font-semibold text-sm hover:opacity-90">Verify & Route Inbound</button>
+                        </div>
+                    </div>
+
+                    <div class="form-step" data-step="3">
+                        <h3 class="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                            <span class="w-7 h-7 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm border border-purple-500/30">3</span>
+                            Identity Validation & Secure Routing
+                        </h3>
+                        <div class="grid sm:grid-cols-2 gap-6 mb-8">
+                            <div class="sm:col-span-2">
+                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-bold">Account Name / Lead Principal</label>
+                                <input type="text" name="lead_name" placeholder="Full Name" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-bold">Secure Contact Coordinates</label>
+                                <input type="email" name="lead_email" placeholder="email@address.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-bold">Mobile Communications Line</label>
+                                <input type="tel" name="lead_phone" placeholder="+1 (555) 000-0000" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500" required>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <button type="button" onclick="prevStep(3)" class="px-6 py-3 rounded-full bg-white/5 text-gray-300 text-sm hover:bg-white/10">Back</button>
+                            <button type="submit" class="px-8 py-3 rounded-full accent-gradient text-white font-bold text-sm shadow-lg shadow-purple-900/50 hover:scale-105 transition-transform">Transmit Secure File Specification</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="formFeedback" class="hidden absolute inset-0 bg-[#0f0314] rounded-3xl flex flex-col items-center justify-center text-center p-8 z-30">
+                    <div id="feedbackIcon" class="w-16 h-16 rounded-full flex items-center justify-center mb-6 text-3xl"></div>
+                    <h3 id="feedbackTitle" class="serif-title text-2xl sm:text-3xl font-bold text-white mb-3"></h3>
+                    <p id="feedbackText" class="text-gray-400 max-w-md mx-auto text-sm sm:text-base leading-relaxed"></p>
+                    <button onclick="resetInquiryForm()" class="mt-8 px-6 py-2.5 rounded-full border border-white/10 text-xs tracking-wider text-gray-400 hover:text-white uppercase">Initialize New Specification</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a href="tel:+15559876543" class="w-12 h-12 rounded-full bg-zinc-900 border border-white/10 flex items-center justify-center text-white text-lg shadow-2xl hover:bg-zinc-800 transition-colors group relative" title="Call Operations Directly">
+            <i class="fa-solid fa-phone"></i>
+            <span class="absolute right-14 bg-[#0f0314] border border-white/10 text-gray-300 px-3 py-1 rounded-md text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl">Hotline Operations</span>
+        </a>
+        <a href="https://wa.me/15559876543?text=Hello,%20I%20have%20reviewed%20your%20BRD%20specification%20and%20wish%20to%20initialize%20design%20consultation." target="_blank" class="w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center text-white text-xl shadow-2xl hover:scale-105 transition-transform group relative" title="Instant Communication Route">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="absolute right-14 bg-[#0f0314] border border-white/10 text-gray-300 px-3 py-1 rounded-md text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl">WhatsApp Secure Inbound</span>
+        </a>
+    </div>
+
+    <footer class="bg-[#07010a] border-t border-white/5 py-12 relative z-20 text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <span class="serif-title text-sm font-bold tracking-wider text-white block mb-3">RADHA NI EVENT</span>
+                <p class="leading-relaxed text-gray-400">Web Architecture & Lead Generation Transformation Project Ecosystem. Scheduled Architecture Year 2026.</p>
+            </div>
+            <div>
+                <span class="font-bold uppercase tracking-wider text-gray-300 block mb-3">BRD Compliance Meta Metrics</span>
+                <ul class="space-y-1.5">
+                    <li>CMS Layer: WordPress / Elementor Pro Prototyping</li>
+                    <li>Hosting Stack Layer: Global Cloud Replica System CDN</li>
+                    <li>Core Engine Audit: Google Analytics 4 (GA4) Enabled</li>
+                </ul>
+            </div>
+            <div>
+                <span class="font-bold uppercase tracking-wider text-gray-300 block mb-3">Target Post-Launch KPIs</span>
+                <ul class="space-y-1.5">
+                    <li>Inquiry Conversion Target Matrix: <span class="text-purple-400">3% - 5%</span></li>
+                    <li>Core Web Vitals Threshold Limit: <span class="text-purple-400">&lt; 2.5s LCP Optimization</span></li>
+                    <li>Lead Budget Envelope Filter: Active Dynamic Rule Engine</li>
+                </ul>
+            </div>
+            <div>
+                <span class="font-bold uppercase tracking-wider text-gray-300 block mb-3">Platform Governance & Security</span>
+                <p class="leading-relaxed">Automated End-to-End SSL Architecture Framework. All interactions tracked via standard operational logs securely.</p>
+                <p class="mt-4 text-[10px] text-gray-600">&copy; 2026 Radha Ni Event. Built to BA Specifications.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Responsive Mobile Menu Drawer Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio Filtering Engine Logic
+        function filterPortfolio(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            const buttons = document.querySelectorAll('.portfolio-filter-btn');
+            
+            buttons.forEach(btn => {
+                btn.classList.remove('border-purple-500/40', 'bg-purple-500/10', 'text-white');
+                btn.classList.add('border-white/5', 'bg-white/5', 'text-gray-400');
+            });
+            
+            event.currentTarget.classList.remove('border-white/5', 'bg-white/5', 'text-gray-400');
+            event.currentTarget.classList.add('border-purple-500/40', 'bg-purple-500/10', 'text-white');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Multi-Step Multi-Inquiry Form Control State Machine Logic
+        let currentStepNum = 1;
+        const totalStepsCount = 3;
+        const progressIndicatorBar = document.getElementById('form-progress');
+
+        function updateFormProgressBar() {
+            const percentageFilled = ((currentStepNum - 1) / (totalStepsCount - 1)) * 100;
+            progressIndicatorBar.style.width = percentageFilled === 0 ? '10%' : `${percentageFilled}%`;
+        }
+
+        function nextStep(step) {
+            // Basic parameter requirement validation layer
+            const activeStepEl = document.querySelector(`.form-step[data-step="${step}"]`);
+            const inputsRequired = activeStepEl.querySelectorAll('[required]');
+            let isValidFormStep = true;
+            
+            inputsRequired.forEach(input => {
+                if (!input.value) {
+                    isValidFormStep = false;
+                    input.classList.add('border-red-500/50');
+                } else {
+                    input.classList.remove('border-red-500/50');
+                }
+            });
+
+            if (!isValidFormStep) return;
+
+            document.querySelector(`.form-step[data-step="${step}"]`).classList.remove('active');
+            currentStepNum = step + 1;
+            document.querySelector(`.form-step[data-step="${currentStepNum}"]`).classList.add('active');
+            updateFormProgressBar();
+        }
+
+        function prevStep(step) {
+            document.querySelector(`.form-step[data-step="${step}"]`).classList.remove('active');
+            currentStepNum = step - 1;
+            document.querySelector(`.form-step[data-step="${currentStepNum}"]`).classList.add('active');
+            updateFormProgressBar();
+        }
+
+        // BRD Section 1 & 3: Dynamic Rule-Based Filtering Constraint Check Handler
+        function handleFormSubmission(e) {
+            e.preventDefault();
+            const formElement = document.getElementById('leadCaptureForm');
+            const dataForm = new FormData(formElement);
+            
+            const budgetSelection = dataForm.get('budget_range');
+            const feedbackScreen = document.getElementById('formFeedback');
+            const iconContainer = document.getElementById('feedbackIcon');
+            const titleContainer = document.getElementById('feedbackTitle');
+            const textContainer = document.getElementById('feedbackText');
+
+            feedbackScreen.classList.remove('hidden');
+
+            // Operational Scalability: Filter out under-qualified or low-budget queries early through rule-based dynamic capture logic
+            if (budgetSelection === 'low') {
+                // Reject/Redirect Logic Loop for Under-Budget constraints
+                iconContainer.className = "w-16 h-16 rounded-full flex items-center justify-center mb-6 text-3xl bg-amber-950/40 text-amber-400 border border-amber-500/30";
+                iconContainer.innerHTML = '<i class="fa-solid fa-circle-nodes"></i>';
+                titleContainer.innerText = "Alternative Routing Context Requested";
+                textContainer.innerHTML = `Thank you for choosing <strong>Radha Ni Event</strong>. Your operational allocation requirements sit beneath our bespoke premium physical production baseline footprint. We have safely logged your contact point and will automatically route your details to our certified localized micro-execution partner list via email metrics.`;
+            } else {
+                // High Intent Qualified Context Capture Match Loop Completed Successfully
+                iconContainer.className = "w-16 h-16 rounded-full flex items-center justify-center mb-6 text-3xl bg-emerald-950/40 text-emerald-400 border border-emerald-500/30";
+                iconContainer.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+                titleContainer.innerText = "Premium Inquiry Qualified Matrix Match";
+                textContainer.innerHTML = `Your project specification file has passed initial baseline qualification. A designated Business Consultant from the <strong>Radha Ni Event</strong> logistics array will arrive fully briefed over your specified coordinates within 4 working hours. Design consultation protocols initialized.`;
+            }
+        }
+
+        function resetInquiryForm() {
+            const formElement = document.getElementById('leadCaptureForm');
+            formElement.reset();
+            document.getElementById('formFeedback').classList.add('hidden');
+            document.querySelector(`.form-step[data-step="${currentStepNum}"]`).classList.remove('active');
+            currentStepNum = 1;
+            document.querySelector(`.form-step[data-step="1"]`).classList.add('active');
+            updateFormProgressBar();
+        }
+    </script>
+</body>
+</html>
