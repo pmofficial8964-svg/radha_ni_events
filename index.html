@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radha Ni Event | Luxury Event Management & Production</title>
-    <!-- Tailwind CSS for modern, scalable styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for interactive widget & UI icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
@@ -38,14 +35,30 @@
         .form-step.active {
             display: block;
         }
+        /* Custom fixed watermark rules layer to maintain readability thresholds */
+        .logo-watermark::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background-image: url('logo.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40%;
+            opacity: 0.04; /* Keep opacity extremely subtle so user context text is easily readable */
+            pointer-events: none; /* Block layout mouse interactions */
+        }
+        @media (max-width: 640px) {
+            .logo-watermark::before {
+                background-size: 75%; /* scale upward to ensure visibility across strict mobile profiles */
+            }
+        }
     </style>
 </head>
-<body class="bg-[#0b020d] text-gray-200 antialiased selection:bg-purple-500 selection:text-white">
+<body class="bg-[#0b020d] text-gray-200 antialiased selection:bg-purple-500 selection:text-white logo-watermark">
 
-    <!-- HEADER / NAVIGATION -->
     <header class="fixed w-full z-50 bg-[#0f0314]/90 backdrop-blur-md border-b border-white/5 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- BRAND LOGO & TITLE ZONE -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative z-10">
             <a href="#home" class="flex items-center gap-3 group">
                 <img src="logo.png" alt="Radha Ni Event Logo" class="h-12 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.style.display='none'">
                 <span class="serif-title text-xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">
@@ -71,8 +84,7 @@
             </div>
         </div>
 
-        <!-- Mobile Dropdown -->
-        <div id="mobileMenu" class="hidden bg-[#0f0314] border-b border-white/10 px-4 py-4 space-y-3 md:hidden">
+        <div id="mobileMenu" class="hidden bg-[#0f0314] border-b border-white/10 px-4 py-4 space-y-3 md:hidden relative z-10">
             <a href="#home" class="block text-gray-300 hover:text-white py-2">Home</a>
             <a href="#about" class="block text-gray-300 hover:text-white py-2">About</a>
             <a href="#services" class="block text-gray-300 hover:text-white py-2">Services</a>
@@ -82,7 +94,6 @@
         </div>
     </header>
 
-    <!-- SECTION 2A: HOMEPAGE (THE HOOK) -->
     <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40"></div>
         <div class="absolute inset-0 hero-gradient z-10"></div>
@@ -113,8 +124,7 @@
         <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0b020d] to-transparent z-20"></div>
     </section>
 
-    <!-- SECTION 2B: ABOUT US & TEAM (THE TRUST) -->
-    <section id="about" class="py-24 relative z-20 bg-[#0b020d]">
+    <section id="about" class="py-24 relative z-20 bg-[#0b020d]/80 backdrop-blur-[2px]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-5 space-y-6">
@@ -151,8 +161,7 @@
         </div>
     </section>
 
-    <!-- SECTION 2C: SEGMENTED SERVICES MATRIX (16 FULL-SERVICE OFFERINGS) -->
-    <section id="services" class="py-24 bg-[#0f0314] border-y border-white/5 relative z-20">
+    <section id="services" class="py-24 bg-[#0f0314]/80 border-y border-white/5 relative z-20 backdrop-blur-[2px]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <div class="text-xs font-bold tracking-widest text-purple-400 uppercase mb-3">Service Scope Architecture</div>
@@ -161,8 +170,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <!-- Service 1: Wedding Event Management -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-purple-950/50 border border-purple-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-gandhi-statue text-purple-400 text-lg"></i>
@@ -171,7 +178,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">End-to-end royal curation, luxury structural frameworks, and high-tier hospitality orchestration.</p>
                 </div>
 
-                <!-- Service 2: Artist Management -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-pink-950/50 border border-pink-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-microphone-lines text-pink-400 text-lg"></i>
@@ -180,7 +186,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">Securing elite talent portfolios, coordinating advanced technical hospitality riders, and backstage routing.</p>
                 </div>
 
-                <!-- Service 3: All Types of Decoration -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-amber-950/50 border border-amber-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-wand-magic-sparkles text-amber-400 text-lg"></i>
@@ -189,7 +194,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">Bespoke spatial design styling ranging from traditional mandates to avant-garde contemporary concepts.</p>
                 </div>
 
-                <!-- Service 4: Corporate Events -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-blue-950/50 border border-blue-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-briefcase text-blue-400 text-lg"></i>
@@ -198,7 +202,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">Flawless execution blueprints for high-stakes product launches, conferences, and executive gala formats.</p>
                 </div>
 
-                <!-- Service 5: SFX (Special Effects) -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-red-950/50 border border-red-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-fire-flame-curved text-red-400 text-lg"></i>
@@ -207,7 +210,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">Cold pyrotechnics, atmospheric heavy fog management, visual timing matrixing, and safety compliance.</p>
                 </div>
 
-                <!-- Service 6: Birthday Party Planning -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-emerald-950/50 border border-emerald-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-cake-candles text-emerald-400 text-lg"></i>
@@ -216,7 +218,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">Bespoke thematic concepts, full entertainment formatting, and signature milestone tracking elements.</p>
                 </div>
 
-                <!-- Service 7: Road Shows -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-orange-950/50 border border-orange-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-truck-fast text-orange-400 text-lg"></i>
@@ -225,7 +226,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">Mobile promotional setups, specialized geographic layout scheduling, and heavy multi-city transit logistics.</p>
                 </div>
 
-                <!-- Service 8: Event Promotions -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-indigo-950/50 border border-indigo-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-bullhorn text-indigo-400 text-lg"></i>
@@ -234,7 +234,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">High-impact visibility frameworks and localized ambient outreach models designed to secure major crowd metrics.</p>
                 </div>
 
-                <!-- Service 9: Professional Photography & Videography -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-cyan-950/50 border border-cyan-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-camera-retro text-cyan-400 text-lg"></i>
@@ -243,7 +242,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">High-resolution operations documentation, cinematic multi-cam coordination, and pristine rapid proofing workflows.</p>
                 </div>
 
-                <!-- Service 10: Get-Together Parties -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-teal-950/50 border border-teal-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-champagne-glasses text-teal-400 text-lg"></i>
@@ -252,7 +250,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">Fluid social staging configurations, premium culinary logistics mapping, and atmospheric lighting design loops.</p>
                 </div>
 
-                <!-- Service 11: Processions (Mangalik Yatra) -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-yellow-950/50 border border-yellow-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-om text-yellow-400 text-lg"></i>
@@ -261,7 +258,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">Traditional layout management, security routing matrices, and heritage cultural orchestration protocols.</p>
                 </div>
 
-                <!-- Service 12: Skilled Manpower Support -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-zinc-950/50 border border-zinc-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-users-gear text-zinc-400 text-lg"></i>
@@ -270,7 +266,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">Proactive on-site stewards, strict technical crews, and disciplined coordination personnel resources.</p>
                 </div>
 
-                <!-- Service 13: Carnival Artists -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-sky-950/50 border border-sky-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-masks-theater text-sky-400 text-lg"></i>
@@ -279,7 +274,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">Immersive live roaming street performers, high-skill balance acts, and premium theatrical additions.</p>
                 </div>
 
-                <!-- Service 14: Games Zone Setup -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-fuchsia-950/50 border border-fuchsia-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-gamepad text-fuchsia-400 text-lg"></i>
@@ -288,7 +282,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">Interactive electronic simulator stations, engaging physical challenges, and full structural play safezones.</p>
                 </div>
 
-                <!-- Service 15: Property Events -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-violet-950/50 border border-violet-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-building-circle-check text-violet-400 text-lg"></i>
@@ -297,7 +290,6 @@
                     <p class="text-gray-400 text-xs leading-relaxed">Elite structural real-estate inaugurations, complex booking gallery launches, and grand reveal engineering.</p>
                 </div>
 
-                <!-- Service 16: Choreography Services & Entry -->
                 <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
                     <div class="w-10 h-10 rounded-xl bg-rose-950/50 border border-rose-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-child-reaching text-rose-400 text-lg"></i>
@@ -305,13 +297,11 @@
                     <h3 class="font-bold text-white text-base mb-2">Choreography & Entry Concepts</h3>
                     <p class="text-gray-400 text-xs leading-relaxed">Professional routine training paired with highly unique structural mechanical entry reveals.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2D: PORTFOLIO EVIDENCE MATRIX -->
-    <section id="portfolio" class="py-24 bg-[#0b020d] relative z-20">
+    <section id="portfolio" class="py-24 bg-[#0b020d]/80 relative z-20 backdrop-blur-[2px]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                 <div>
@@ -326,7 +316,6 @@
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
-                <!-- Project Item 1: image_113c97.jpg -->
                 <div class="portfolio-item social relative overflow-hidden rounded-2xl group border border-white/5">
                     <div class="w-full h-96 overflow-hidden">
                         <img src="image_113c97.jpg" alt="Radha Ni Event - Family Holi Milestone" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 object-center" onerror="this.src='https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1000&auto=format&fit=crop'">
@@ -342,7 +331,6 @@
                     </div>
                 </div>
 
-                <!-- Project Item 2: image_113510.jpg -->
                 <div class="portfolio-item production relative overflow-hidden rounded-2xl group border border-white/5">
                     <div class="w-full h-96 overflow-hidden">
                         <img src="image_113510.jpg" alt="Radha Ni Event - Immersive Concert Setup" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 object-center" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000&auto=format&fit=crop'">
@@ -358,371 +346,6 @@
                     </div>
                 </div>
 
-                <!-- Project Item 3: image_1134b7.jpg -->
                 <div class="portfolio-item production relative overflow-hidden rounded-2xl group border border-white/5">
                     <div class="w-full h-96 overflow-hidden">
-                        <img src="image_1134b7.jpg" alt="Radha Ni Event - Production Crew Assembly" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 object-center" onerror="this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000&auto=format&fit=crop'">
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-85"></div>
-                    <div class="absolute bottom-0 left-0 p-6 w-full">
-                        <span class="text-xs text-blue-400 font-bold uppercase tracking-wider mb-1 block">Operations & Infrastructure</span>
-                        <h4 class="text-lg font-bold text-white serif-title">Radha Ni Hall Stage Architecture</h4>
-                        <div class="flex items-center justify-between mt-2 pt-2 border-t border-white/10 text-xs text-gray-400">
-                            <span>Focus: Truss Construction</span>
-                            <span>Deployment: Specialized Security Crew</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 2E: CONTACT & EXECUTIVE ESCALATION LAYER -->
-    <section id="contact" class="py-24 bg-[#0f0314] border-t border-white/5 relative z-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-5 space-y-6">
-                    <div class="text-xs font-bold tracking-widest text-purple-400 uppercase">Direct Communications Block</div>
-                    <h2 class="serif-title text-3xl sm:text-4xl font-bold text-white">Connect with Principal Leadership</h2>
-                    <p class="text-gray-400 leading-relaxed">
-                        Skip automated screening queues entirely. Connect directly with our core executive management office to initialize immediate layout blueprints for your high-budget milestones.
-                    </p>
-                    
-                    <div class="space-y-4 pt-4">
-                        <!-- Owner Identification Profile -->
-                        <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
-                            <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 text-xl border border-purple-500/30">
-                                <i class="fa-solid fa-user-tie"></i>
-                            </div>
-                            <div>
-                                <div class="text-xs text-gray-400 uppercase tracking-wider font-bold">Managing Director / Owner</div>
-                                <div class="text-lg font-semibold text-white">Ritesh Mishra</div>
-                            </div>
-                        </div>
-
-                        <!-- Secure Communication Links -->
-                        <a href="mailto:radhanievents@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-purple-500/40 transition-colors group">
-                            <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 text-xl border border-blue-500/30 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div>
-                                <div class="text-xs text-gray-400 uppercase tracking-wider font-bold">Email Intercept Line</div>
-                                <div class="text-base font-medium text-white hover:text-purple-300">radhanievents@gmail.com</div>
-                            </div>
-                        </a>
-
-                        <a href="tel:+919644043473" class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/40 transition-colors group">
-                            <div class="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl border border-emerald-500/30 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-phone-volume"></i>
-                            </div>
-                            <div>
-                                <div class="text-xs text-gray-400 uppercase tracking-wider font-bold">Direct Corporate Line</div>
-                                <div class="text-base font-medium text-white hover:text-emerald-300">+91 96440 43473</div>
-                            </div>
-                        </a>
-
-                        <a href="https://instagram.com/Riteshofficialmusic61" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-pink-500/40 transition-colors group">
-                            <div class="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-400 text-xl border border-pink-500/30 group-hover:scale-110 transition-transform">
-                                <i class="fa-brands fa-instagram"></i>
-                            </div>
-                            <div>
-                                <div class="text-xs text-gray-400 uppercase tracking-wider font-bold">Official Creative Handle</div>
-                                <div class="text-base font-medium text-white hover:text-pink-300">@Riteshofficialmusic61</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-7 p-8 rounded-3xl glass-card border border-white/10 text-center space-y-6">
-                    <div class="w-16 h-16 rounded-full bg-purple-500/10 text-purple-400 flex items-center justify-center mx-auto text-2xl border border-purple-500/20">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <h3 class="serif-title text-2xl font-bold text-white">Guaranteed Response Architecture</h3>
-                    <p class="text-gray-400 text-sm max-w-md mx-auto leading-relaxed">
-                        All communications passing directly through email lines or encrypted physical phones hit our operational routing board immediately. Expect zero wait times on planning parameters.
-                    </p>
-                    <div class="pt-4">
-                        <a href="#booking-engine" class="inline-block accent-gradient px-8 py-3.5 rounded-full font-bold text-sm text-white tracking-wide shadow-xl hover:opacity-90 transition-opacity">
-                            Launch Electronic Lead Configurator
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: PHASED LEAD CAPTURE ENGINE -->
-    <section id="booking-engine" class="py-24 bg-gradient-to-b from-[#0f0314] to-[#0b020d] border-t border-white/5 relative z-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <div class="text-xs font-bold tracking-widest text-purple-400 uppercase mb-3">Phase 1 Lead Optimization Engine</div>
-                <h2 class="serif-title text-3xl sm:text-5xl font-bold text-white mb-4">Intelligent Multi-Step Inquiry Router</h2>
-                <p class="text-gray-400 max-w-xl mx-auto">Provide parameters to auto-qualify project scaling and budget fits. Move negotiations instantly to an advanced structural stage.</p>
-            </div>
-
-            <div class="p-8 sm:p-12 rounded-3xl glass-card relative border border-white/10 shadow-2xl">
-                <div class="w-full bg-white/5 h-1 rounded-full mb-10 overflow-hidden flex">
-                    <div class="accent-gradient h-full w-1/3 transition-all duration-300" id="form-progress"></div>
-                </div>
-
-                <form id="leadCaptureForm" onsubmit="handleFormSubmission(event)">
-                    <!-- STEP 1: Context Definition -->
-                    <div class="form-step active" data-step="1">
-                        <h3 class="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-                            <span class="w-7 h-7 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm border border-purple-500/30">1</span>
-                            Define Event Architectural Domain
-                        </h3>
-                        <div class="grid sm:grid-cols-3 gap-4 mb-8">
-                            <label class="cursor-pointer relative p-5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 flex flex-col justify-between h-36 transition-all select-none">
-                                <input type="radio" name="event_type" value="weddings" class="absolute top-4 right-4 accent-purple-500" checked>
-                                <i class="fa-solid fa-heart text-2xl text-purple-400 mt-4"></i>
-                                <span class="font-medium text-white block">Wedding & Pre-Wed</span>
-                            </label>
-                            <label class="cursor-pointer relative p-5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 flex flex-col justify-between h-36 transition-all select-none">
-                                <input type="radio" name="event_type" value="corporate" class="absolute top-4 right-4 accent-purple-500">
-                                <i class="fa-solid fa-building text-2xl text-blue-400 mt-4"></i>
-                                <span class="font-medium text-white block">Corporate & MICE</span>
-                            </label>
-                            <label class="cursor-pointer relative p-5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 flex flex-col justify-between h-36 transition-all select-none">
-                                <input type="radio" name="event_type" value="social" class="absolute top-4 right-4 accent-purple-500">
-                                <i class="fa-solid fa-glass-cheers text-2xl text-amber-400 mt-4"></i>
-                                <span class="font-medium text-white block">Social & Themed</span>
-                            </label>
-                        </div>
-                        <div class="flex justify-end">
-                            <button type="button" onclick="nextStep(1)" class="px-6 py-3 rounded-full accent-gradient text-white font-semibold text-sm hover:opacity-90">Continue to Logistics</button>
-                        </div>
-                    </div>
-
-                    <!-- STEP 2: Scale & Operational Budget Limits -->
-                    <div class="form-step" data-step="2">
-                        <h3 class="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-                            <span class="w-7 h-7 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm border border-purple-500/30">2</span>
-                            Logistical Parameters & Scale Fitment
-                        </h3>
-                        <div class="grid sm:grid-cols-2 gap-6 mb-8">
-                            <div>
-                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-bold">Estimated Guest Logistics Count</label>
-                                <select name="guest_count" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500" required>
-                                    <option value="" disabled selected class="bg-[#14061a]">Select capacity envelope...</option>
-                                    <option value="under_200" class="bg-[#14061a]">Under 200 Guests</option>
-                                    <option value="200_500" class="bg-[#14061a]">200 - 500 Guests</option>
-                                    <option value="500_1000" class="bg-[#14061a]">500 - 1,000 Guests</option>
-                                    <option value="1000_plus" class="bg-[#14061a]">1,000+ Premium Scale</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-bold">Estimated Operational Budget Range</label>
-                                <select id="budget_range" name="budget_range" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500" required>
-                                    <option value="" disabled selected class="bg-[#14061a]">Select investment envelope...</option>
-                                    <option value="low" class="bg-[#14061a]">Below Operational Limit ($10,000)</option>
-                                    <option value="standard" class="bg-[#14061a]">$10,000 - $30,000</option>
-                                    <option value="premium" class="bg-[#14061a]">$30,000 - $75,000</option>
-                                    <option value="ultra_high" class="bg-[#14061a]">$75,000+ Elite Production</option>
-                                </select>
-                            </div>
-                            <div class="sm:col-span-2">
-                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-bold">Target Execution Date Window</label>
-                                <input type="text" name="date_range" placeholder="e.g., Mid October 2026 or Specific Dates" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500" required>
-                            </div>
-                        </div>
-                        <div class="flex justify-between">
-                            <button type="button" onclick="prevStep(2)" class="px-6 py-3 rounded-full bg-white/5 text-gray-300 text-sm hover:bg-white/10">Back</button>
-                            <button type="button" onclick="nextStep(2)" class="px-6 py-3 rounded-full accent-gradient text-white font-semibold text-sm hover:opacity-90">Verify & Route Inbound</button>
-                        </div>
-                    </div>
-
-                    <!-- STEP 3: Contextual Identity Mapping -->
-                    <div class="form-step" data-step="3">
-                        <h3 class="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-                            <span class="w-7 h-7 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm border border-purple-500/30">3</span>
-                            Identity Validation & Secure Routing
-                        </h3>
-                        <div class="grid sm:grid-cols-2 gap-6 mb-8">
-                            <div class="sm:col-span-2">
-                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-bold">Account Name / Lead Principal</label>
-                                <input type="text" name="lead_name" placeholder="Full Name" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500" required>
-                            </div>
-                            <div>
-                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-bold">Secure Contact Coordinates</label>
-                                <input type="email" name="lead_email" placeholder="email@address.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500" required>
-                            </div>
-                            <div>
-                                <label class="block text-xs uppercase tracking-wider text-gray-400 mb-2 font-bold">Mobile Communications Line</label>
-                                <input type="tel" name="lead_phone" placeholder="+1 (555) 000-0000" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500" required>
-                            </div>
-                        </div>
-                        <div class="flex justify-between">
-                            <button type="button" onclick="prevStep(3)" class="px-6 py-3 rounded-full bg-white/5 text-gray-300 text-sm hover:bg-white/10">Back</button>
-                            <button type="submit" class="px-8 py-3 rounded-full accent-gradient text-white font-bold text-sm shadow-lg shadow-purple-900/50 hover:scale-105 transition-transform">Transmit Secure File Specification</button>
-                        </div>
-                    </div>
-                </form>
-
-                <!-- Post-Submission Feedback Overlay -->
-                <div id="formFeedback" class="hidden absolute inset-0 bg-[#0f0314] rounded-3xl flex flex-col items-center justify-center text-center p-8 z-30">
-                    <div id="feedbackIcon" class="w-16 h-16 rounded-full flex items-center justify-center mb-6 text-3xl"></div>
-                    <h3 id="feedbackTitle" class="serif-title text-2xl sm:text-3xl font-bold text-white mb-3"></h3>
-                    <p id="feedbackText" class="text-gray-400 max-w-md mx-auto text-sm sm:text-base leading-relaxed"></p>
-                    <button onclick="resetInquiryForm()" class="mt-8 px-6 py-2.5 rounded-full border border-white/10 text-xs tracking-wider text-gray-400 hover:text-white uppercase">Initialize New Specification</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FLOATING INTERACTIVE WIDGETS -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-        <a href="tel:+919644043473" class="w-12 h-12 rounded-full bg-zinc-900 border border-white/10 flex items-center justify-center text-white text-lg shadow-2xl hover:bg-zinc-800 transition-colors group relative" title="Call Ritesh Mishra Directly">
-            <i class="fa-solid fa-phone"></i>
-            <span class="absolute right-14 bg-[#0f0314] border border-white/10 text-gray-300 px-3 py-1 rounded-md text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl">Hotline Operations</span>
-        </a>
-        <a href="https://wa.me/919644043473?text=Hello%20Ritesh,%20I%20have%20reviewed%20your%20portfolio%20proofs%20and%20wish%20to%20initialize%20an%20event%20design%20consultation." target="_blank" class="w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center text-white text-xl shadow-2xl hover:scale-105 transition-transform group relative" title="Instant WhatsApp Routing">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span class="absolute right-14 bg-[#0f0314] border border-white/10 text-gray-300 px-3 py-1 rounded-md text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl">WhatsApp Secure Inbound</span>
-        </a>
-    </div>
-
-    <!-- CORE BUSINESS METRICS / ANALYTICS SIMULATOR -->
-    <footer class="bg-[#07010a] border-t border-white/5 py-12 relative z-20 text-xs text-gray-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="space-y-4">
-                <div class="flex items-center gap-3">
-                    <img src="logo.png" alt="Radha Ni Event Logo" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
-                    <span class="serif-title text-sm font-bold tracking-wider text-white">RADHA NI EVENT</span>
-                </div>
-                <p class="leading-relaxed text-gray-400">Web Architecture & Lead Generation Transformation Project Ecosystem. Scheduled Architecture Year 2026.</p>
-            </div>
-            <div>
-                <span class="font-bold uppercase tracking-wider text-gray-300 block mb-3">BRD Compliance Meta Metrics</span>
-                <ul class="space-y-1.5">
-                    <li>CMS Layer: WordPress / Elementor Pro Prototyping</li>
-                    <li>Hosting Stack Layer: Global Cloud Replica System CDN</li>
-                    <li>Core Engine Audit: Google Analytics 4 (GA4) Enabled</li>
-                </ul>
-            </div>
-            <div>
-                <span class="font-bold uppercase tracking-wider text-gray-300 block mb-3">Target Post-Launch KPIs</span>
-                <ul class="space-y-1.5">
-                    <li>Inquiry Conversion Target Matrix: <span class="text-purple-400">3% - 5%</span></li>
-                    <li>Core Web Vitals Threshold Limit: <span class="text-purple-400">&lt; 2.5s LCP Optimization</span></li>
-                    <li>Lead Budget Envelope Filter: Active Dynamic Rule Engine</li>
-                </ul>
-            </div>
-            <div>
-                <span class="font-bold uppercase tracking-wider text-gray-300 block mb-3">Executive Governance</span>
-                <p class="leading-relaxed">Platform Owner: <strong>Ritesh Mishra</strong></p>
-                <p class="leading-relaxed mt-1">IG Core: @Riteshofficialmusic61</p>
-                <p class="mt-4 text-[10px] text-gray-600">&copy; 2026 Radha Ni Event. Built to BA Specifications.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- INTERACTIVE SCRIPT LAYER -->
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Portfolio Filtering
-        function filterPortfolio(category) {
-            const items = document.querySelectorAll('.portfolio-item');
-            const buttons = document.querySelectorAll('.portfolio-filter-btn');
-            
-            buttons.forEach(btn => {
-                btn.classList.remove('border-purple-500/40', 'bg-purple-500/10', 'text-white');
-                btn.classList.add('border-white/5', 'bg-white/5', 'text-gray-400');
-            });
-            
-            event.currentTarget.classList.remove('border-white/5', 'bg-white/5', 'text-gray-400');
-            event.currentTarget.classList.add('border-purple-500/40', 'bg-purple-500/10', 'text-white');
-
-            items.forEach(item => {
-                if (category === 'all' || item.classList.contains(category)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-
-        // Multi-Step Form Layout Controller
-        let currentStepNum = 1;
-        const totalStepsCount = 3;
-        const progressIndicatorBar = document.getElementById('form-progress');
-
-        function updateFormProgressBar() {
-            const percentageFilled = ((currentStepNum - 1) / (totalStepsCount - 1)) * 100;
-            progressIndicatorBar.style.width = percentageFilled === 0 ? '10%' : `${percentageFilled}%`;
-        }
-
-        function nextStep(step) {
-            const activeStepEl = document.querySelector(`.form-step[data-step="${step}"]`);
-            const inputsRequired = activeStepEl.querySelectorAll('[required]');
-            let isValidFormStep = true;
-            
-            inputsRequired.forEach(input => {
-                if (!input.value) {
-                    isValidFormStep = false;
-                    input.classList.add('border-red-500/50');
-                } else {
-                    input.classList.remove('border-red-500/50');
-                }
-            });
-
-            if (!isValidFormStep) return;
-
-            document.querySelector(`.form-step[data-step="${step}"]`).classList.remove('active');
-            currentStepNum = step + 1;
-            document.querySelector(`.form-step[data-step="${currentStepNum}"]`).classList.add('active');
-            updateFormProgressBar();
-        }
-
-        function prevStep(step) {
-            document.querySelector(`.form-step[data-step="${step}"]`).classList.remove('active');
-            currentStepNum = step - 1;
-            document.querySelector(`.form-step[data-step="${currentStepNum}"]`).classList.add('active');
-            updateFormProgressBar();
-        }
-
-        // Rule-Based Filtering Constraint Handler
-        function handleFormSubmission(e) {
-            e.preventDefault();
-            const formElement = document.getElementById('leadCaptureForm');
-            const dataForm = new FormData(formElement);
-            
-            const budgetSelection = dataForm.get('budget_range');
-            const feedbackScreen = document.getElementById('formFeedback');
-            const iconContainer = document.getElementById('feedbackIcon');
-            const titleContainer = document.getElementById('feedbackTitle');
-            const textContainer = document.getElementById('feedbackText');
-
-            feedbackScreen.classList.remove('hidden');
-
-            if (budgetSelection === 'low') {
-                iconContainer.className = "w-16 h-16 rounded-full flex items-center justify-center mb-6 text-3xl bg-amber-950/40 text-amber-400 border border-amber-500/30";
-                iconContainer.innerHTML = '<i class="fa-solid fa-circle-nodes"></i>';
-                titleContainer.innerText = "Alternative Routing Context Requested";
-                textContainer.innerHTML = `Thank you for choosing <strong>Radha Ni Event</strong>. Your operational allocation requirements sit beneath our bespoke premium physical production baseline footprint. We have safely logged your contact point and will automatically route your details to our certified localized micro-execution partner list via email metrics.`;
-            } else {
-                iconContainer.className = "w-16 h-16 rounded-full flex items-center justify-center mb-6 text-3xl bg-emerald-950/40 text-emerald-400 border border-emerald-500/30";
-                iconContainer.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-                titleContainer.innerText = "Premium Inquiry Qualified Matrix Match";
-                textContainer.innerHTML = `Your project specification file has passed initial baseline qualification. The management team at <strong>Radha Ni Event</strong> overseen by <strong>Ritesh Mishra</strong> will contact your coordinates within 4 working hours. Design consultation protocols initialized.`;
-            }
-        }
-
-        function resetInquiryForm() {
-            const formElement = document.getElementById('leadCaptureForm');
-            formElement.reset();
-            document.getElementById('formFeedback').classList.add('hidden');
-            document.querySelector(`.form-step[data-step="${currentStepNum}"]`).classList.remove('active');
-            currentStepNum = 1;
-            document.querySelector(`.form-step[data-step="1"]`).classList.add('active');
-            updateFormProgressBar();
-        }
-    </script>
-</body>
-</html>
+                        <img src="image_1134b7.jpg" alt="Radha Ni Event - Production Crew Assembly" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 object-center" onerror="this.src='
