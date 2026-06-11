@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radha Ni Event | Luxury Event Management & Production</title>
+    <!-- Tailwind CSS for modern, scalable styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for interactive widget & UI icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
@@ -39,13 +42,16 @@
 </head>
 <body class="bg-[#0b020d] text-gray-200 antialiased selection:bg-purple-500 selection:text-white">
 
+    <!-- HEADER / NAVIGATION -->
     <header class="fixed w-full z-50 bg-[#0f0314]/90 backdrop-blur-md border-b border-white/5 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <span class="serif-title text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">
+            <!-- BRAND LOGO & TITLE ZONE -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <img src="logo.png" alt="Radha Ni Event Logo" class="h-12 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.style.display='none'">
+                <span class="serif-title text-xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">
                     RADHA NI EVENT
                 </span>
-            </div>
+            </a>
             
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
                 <a href="#home" class="hover:text-purple-400 transition-colors">Home</a>
@@ -65,6 +71,7 @@
             </div>
         </div>
 
+        <!-- Mobile Dropdown -->
         <div id="mobileMenu" class="hidden bg-[#0f0314] border-b border-white/10 px-4 py-4 space-y-3 md:hidden">
             <a href="#home" class="block text-gray-300 hover:text-white py-2">Home</a>
             <a href="#about" class="block text-gray-300 hover:text-white py-2">About</a>
@@ -75,6 +82,7 @@
         </div>
     </header>
 
+    <!-- SECTION 2A: HOMEPAGE (THE HOOK) -->
     <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40"></div>
         <div class="absolute inset-0 hero-gradient z-10"></div>
@@ -105,6 +113,7 @@
         <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0b020d] to-transparent z-20"></div>
     </section>
 
+    <!-- SECTION 2B: ABOUT US & TEAM (THE TRUST) -->
     <section id="about" class="py-24 relative z-20 bg-[#0b020d]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
@@ -142,60 +151,166 @@
         </div>
     </section>
 
+    <!-- SECTION 2C: SEGMENTED SERVICES MATRIX (16 FULL-SERVICE OFFERINGS) -->
     <section id="services" class="py-24 bg-[#0f0314] border-y border-white/5 relative z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <div class="text-xs font-bold tracking-widest text-purple-400 uppercase mb-3">Service Scope Architecture</div>
                 <h2 class="serif-title text-3xl sm:text-5xl font-bold text-white mb-4">Dedicated Structural Competence</h2>
-                <p class="text-gray-400">Deep SEO relevance built across separated functional categories ensuring optimized planning context.</p>
+                <p class="text-gray-400">Our comprehensive suite of production capabilities engineered to eliminate structural execution risks across all milestone formats.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-purple-950/50 border border-purple-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-heart text-purple-400 text-xl"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Service 1: Wedding Event Management -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-purple-950/50 border border-purple-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-gandhi-statue text-purple-400 text-lg"></i>
                     </div>
-                    <h3 class="serif-title text-xl font-bold text-white mb-3">Weddings & Pre-wedding Ceremonies</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        Luxury conceptual decor, structural staging architecture, premium global venue curation, fine catering logistical systems, and master vendor deployment maps.
-                    </p>
-                    <ul class="space-y-2 text-xs text-gray-400 border-t border-white/5 pt-4">
-                        <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Bespoke Scale Blueprinting</li>
-                        <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Multi-tier Micro Catering Maps</li>
-                    </ul>
+                    <h3 class="font-bold text-white text-base mb-2">Wedding Event Management</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">End-to-end royal curation, luxury structural frameworks, and high-tier hospitality orchestration.</p>
                 </div>
 
-                <div class="p-8 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-blue-950/50 border border-blue-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-building text-blue-400 text-xl"></i>
+                <!-- Service 2: Artist Management -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-pink-950/50 border border-pink-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-microphone-lines text-pink-400 text-lg"></i>
                     </div>
-                    <h3 class="serif-title text-xl font-bold text-white mb-3">Corporate Events & MICE Architecture</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        Flawless physical product launches, major industry conferences, elite awards nights, highly advanced audio-visual technical setups, and executive hospitality arrays.
-                    </p>
-                    <ul class="space-y-2 text-xs text-gray-400 border-t border-white/5 pt-4">
-                        <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>Zero Latency Audio-Visual Meshing</li>
-                        <li><i class="fa-solid fa-check text-blue-400 mr-2"></i>Executive Delegations Routing</li>
-                    </ul>
+                    <h3 class="font-bold text-white text-base mb-2">Artist Management</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Securing elite talent portfolios, coordinating advanced technical hospitality riders, and backstage routing.</p>
                 </div>
 
-                <div class="p-8 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
-                    <div class="w-12 h-12 rounded-xl bg-amber-950/50 border border-amber-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-glass-cheers text-amber-400 text-xl"></i>
+                <!-- Service 3: All Types of Decoration -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-amber-950/50 border border-amber-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-wand-magic-sparkles text-amber-400 text-lg"></i>
                     </div>
-                    <h3 class="serif-title text-xl font-bold text-white mb-3">Social Parties & Themed Gatherings</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        Bespoke milestone anniversaries, luxury birthdays, cultural celebratory events, and deeply customized spatial dining and tailored thematic entertainment frameworks.
-                    </p>
-                    <ul class="space-y-2 text-xs text-gray-400 border-t border-white/5 pt-4">
-                        <li><i class="fa-solid fa-check text-amber-400 mr-2"></i>Concept-to-Room Theming</li>
-                        <li><i class="fa-solid fa-check text-amber-400 mr-2"></i>Custom Immersive Entertainment</li>
-                    </ul>
+                    <h3 class="font-bold text-white text-base mb-2">All Types of Decoration</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Bespoke spatial design styling ranging from traditional mandates to avant-garde contemporary concepts.</p>
                 </div>
+
+                <!-- Service 4: Corporate Events -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-blue-950/50 border border-blue-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-briefcase text-blue-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Corporate Events</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Flawless execution blueprints for high-stakes product launches, conferences, and executive gala formats.</p>
+                </div>
+
+                <!-- Service 5: SFX (Special Effects) -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-red-950/50 border border-red-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-fire-flame-curved text-red-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">SFX (Special Effects)</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Cold pyrotechnics, atmospheric heavy fog management, visual timing matrixing, and safety compliance.</p>
+                </div>
+
+                <!-- Service 6: Birthday Party Planning -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-950/50 border border-emerald-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-cake-candles text-emerald-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Birthday Party Planning</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Bespoke thematic concepts, full entertainment formatting, and signature milestone tracking elements.</p>
+                </div>
+
+                <!-- Service 7: Road Shows -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-orange-950/50 border border-orange-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-truck-fast text-orange-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Road Shows</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Mobile promotional setups, specialized geographic layout scheduling, and heavy multi-city transit logistics.</p>
+                </div>
+
+                <!-- Service 8: Event Promotions -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-950/50 border border-indigo-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bullhorn text-indigo-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Event Promotions</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">High-impact visibility frameworks and localized ambient outreach models designed to secure major crowd metrics.</p>
+                </div>
+
+                <!-- Service 9: Professional Photography & Videography -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-950/50 border border-cyan-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-camera-retro text-cyan-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Photography & Videography</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">High-resolution operations documentation, cinematic multi-cam coordination, and pristine rapid proofing workflows.</p>
+                </div>
+
+                <!-- Service 10: Get-Together Parties -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-teal-950/50 border border-teal-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-champagne-glasses text-teal-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Get-Together Parties</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Fluid social staging configurations, premium culinary logistics mapping, and atmospheric lighting design loops.</p>
+                </div>
+
+                <!-- Service 11: Processions (Mangalik Yatra) -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-yellow-950/50 border border-yellow-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-om text-yellow-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Processions (Mangalik Yatra)</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Traditional layout management, security routing matrices, and heritage cultural orchestration protocols.</p>
+                </div>
+
+                <!-- Service 12: Skilled Manpower Support -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-zinc-950/50 border border-zinc-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-users-gear text-zinc-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Skilled Manpower Support</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Proactive on-site stewards, strict technical crews, and disciplined coordination personnel resources.</p>
+                </div>
+
+                <!-- Service 13: Carnival Artists -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-sky-950/50 border border-sky-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-masks-theater text-sky-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Carnival Artists</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Immersive live roaming street performers, high-skill balance acts, and premium theatrical additions.</p>
+                </div>
+
+                <!-- Service 14: Games Zone Setup -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-fuchsia-950/50 border border-fuchsia-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-gamepad text-fuchsia-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Games Zone Setup</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Interactive electronic simulator stations, engaging physical challenges, and full structural play safezones.</p>
+                </div>
+
+                <!-- Service 15: Property Events -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-violet-950/50 border border-violet-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-building-circle-check text-violet-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Property Events</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Elite structural real-estate inaugurations, complex booking gallery launches, and grand reveal engineering.</p>
+                </div>
+
+                <!-- Service 16: Choreography Services & Entry -->
+                <div class="p-6 rounded-2xl glass-card hover:border-purple-500/30 transition-all duration-300 group">
+                    <div class="w-10 h-10 rounded-xl bg-rose-950/50 border border-rose-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-child-reaching text-rose-400 text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Choreography & Entry Concepts</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Professional routine training paired with highly unique structural mechanical entry reveals.</p>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <!-- SECTION 2D: PORTFOLIO EVIDENCE MATRIX -->
     <section id="portfolio" class="py-24 bg-[#0b020d] relative z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -211,9 +326,10 @@
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+                <!-- Project Item 1: image_113c97.jpg -->
                 <div class="portfolio-item social relative overflow-hidden rounded-2xl group border border-white/5">
                     <div class="w-full h-96 overflow-hidden">
-                        <img src="image_113c97.jpg" alt="Radha Ni Event - Family Holi Milestone" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 object-center">
+                        <img src="image_113c97.jpg" alt="Radha Ni Event - Family Holi Milestone" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 object-center" onerror="this.src='https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1000&auto=format&fit=crop'">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-85"></div>
                     <div class="absolute bottom-0 left-0 p-6 w-full">
@@ -226,9 +342,10 @@
                     </div>
                 </div>
 
+                <!-- Project Item 2: image_113510.jpg -->
                 <div class="portfolio-item production relative overflow-hidden rounded-2xl group border border-white/5">
                     <div class="w-full h-96 overflow-hidden">
-                        <img src="image_113510.jpg" alt="Radha Ni Event - Immersive Concert Setup" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 object-center">
+                        <img src="image_113510.jpg" alt="Radha Ni Event - Immersive Concert Setup" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 object-center" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1000&auto=format&fit=crop'">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-85"></div>
                     <div class="absolute bottom-0 left-0 p-6 w-full">
@@ -241,9 +358,10 @@
                     </div>
                 </div>
 
+                <!-- Project Item 3: image_1134b7.jpg -->
                 <div class="portfolio-item production relative overflow-hidden rounded-2xl group border border-white/5">
                     <div class="w-full h-96 overflow-hidden">
-                        <img src="image_1134b7.jpg" alt="Radha Ni Event - Production Crew Assembly" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 object-center">
+                        <img src="image_1134b7.jpg" alt="Radha Ni Event - Production Crew Assembly" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 object-center" onerror="this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000&auto=format&fit=crop'">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-85"></div>
                     <div class="absolute bottom-0 left-0 p-6 w-full">
@@ -259,6 +377,7 @@
         </div>
     </section>
 
+    <!-- SECTION 2E: CONTACT & EXECUTIVE ESCALATION LAYER -->
     <section id="contact" class="py-24 bg-[#0f0314] border-t border-white/5 relative z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
@@ -270,6 +389,7 @@
                     </p>
                     
                     <div class="space-y-4 pt-4">
+                        <!-- Owner Identification Profile -->
                         <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
                             <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 text-xl border border-purple-500/30">
                                 <i class="fa-solid fa-user-tie"></i>
@@ -280,6 +400,7 @@
                             </div>
                         </div>
 
+                        <!-- Secure Communication Links -->
                         <a href="mailto:radhanievents@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-purple-500/40 transition-colors group">
                             <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 text-xl border border-blue-500/30 group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-envelope"></i>
@@ -330,6 +451,7 @@
         </div>
     </section>
 
+    <!-- SECTION 3: PHASED LEAD CAPTURE ENGINE -->
     <section id="booking-engine" class="py-24 bg-gradient-to-b from-[#0f0314] to-[#0b020d] border-t border-white/5 relative z-20">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -344,6 +466,7 @@
                 </div>
 
                 <form id="leadCaptureForm" onsubmit="handleFormSubmission(event)">
+                    <!-- STEP 1: Context Definition -->
                     <div class="form-step active" data-step="1">
                         <h3 class="text-xl font-semibold text-white mb-6 flex items-center gap-2">
                             <span class="w-7 h-7 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm border border-purple-500/30">1</span>
@@ -371,6 +494,7 @@
                         </div>
                     </div>
 
+                    <!-- STEP 2: Scale & Operational Budget Limits -->
                     <div class="form-step" data-step="2">
                         <h3 class="text-xl font-semibold text-white mb-6 flex items-center gap-2">
                             <span class="w-7 h-7 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm border border-purple-500/30">2</span>
@@ -408,6 +532,7 @@
                         </div>
                     </div>
 
+                    <!-- STEP 3: Contextual Identity Mapping -->
                     <div class="form-step" data-step="3">
                         <h3 class="text-xl font-semibold text-white mb-6 flex items-center gap-2">
                             <span class="w-7 h-7 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm border border-purple-500/30">3</span>
@@ -434,6 +559,7 @@
                     </div>
                 </form>
 
+                <!-- Post-Submission Feedback Overlay -->
                 <div id="formFeedback" class="hidden absolute inset-0 bg-[#0f0314] rounded-3xl flex flex-col items-center justify-center text-center p-8 z-30">
                     <div id="feedbackIcon" class="w-16 h-16 rounded-full flex items-center justify-center mb-6 text-3xl"></div>
                     <h3 id="feedbackTitle" class="serif-title text-2xl sm:text-3xl font-bold text-white mb-3"></h3>
@@ -444,6 +570,7 @@
         </div>
     </section>
 
+    <!-- FLOATING INTERACTIVE WIDGETS -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
         <a href="tel:+919644043473" class="w-12 h-12 rounded-full bg-zinc-900 border border-white/10 flex items-center justify-center text-white text-lg shadow-2xl hover:bg-zinc-800 transition-colors group relative" title="Call Ritesh Mishra Directly">
             <i class="fa-solid fa-phone"></i>
@@ -455,10 +582,14 @@
         </a>
     </div>
 
+    <!-- CORE BUSINESS METRICS / ANALYTICS SIMULATOR -->
     <footer class="bg-[#07010a] border-t border-white/5 py-12 relative z-20 text-xs text-gray-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-                <span class="serif-title text-sm font-bold tracking-wider text-white block mb-3">RADHA NI EVENT</span>
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <img src="logo.png" alt="Radha Ni Event Logo" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
+                    <span class="serif-title text-sm font-bold tracking-wider text-white">RADHA NI EVENT</span>
+                </div>
                 <p class="leading-relaxed text-gray-400">Web Architecture & Lead Generation Transformation Project Ecosystem. Scheduled Architecture Year 2026.</p>
             </div>
             <div>
@@ -486,15 +617,16 @@
         </div>
     </footer>
 
+    <!-- INTERACTIVE SCRIPT LAYER -->
     <script>
-        // Responsive Mobile Menu Drawer Toggle Logic
+        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Portfolio Filtering Engine Logic
+        // Portfolio Filtering
         function filterPortfolio(category) {
             const items = document.querySelectorAll('.portfolio-item');
             const buttons = document.querySelectorAll('.portfolio-filter-btn');
@@ -516,7 +648,7 @@
             });
         }
 
-        // Multi-Step Inquiry Form Control Logic
+        // Multi-Step Form Layout Controller
         let currentStepNum = 1;
         const totalStepsCount = 3;
         const progressIndicatorBar = document.getElementById('form-progress');
@@ -555,7 +687,7 @@
             updateFormProgressBar();
         }
 
-        // Dynamic Filtering Constraint Check Handler
+        // Rule-Based Filtering Constraint Handler
         function handleFormSubmission(e) {
             e.preventDefault();
             const formElement = document.getElementById('leadCaptureForm');
